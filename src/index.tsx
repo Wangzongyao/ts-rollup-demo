@@ -5,5 +5,5 @@ import { Component } from './person'
 
 ReactDOM.render(
     <Component realName='wangzongyao' sex='man' />,
-    document.getElementById('app')
+    document.getElementById('app'),
 );

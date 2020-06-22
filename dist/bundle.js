@@ -28528,38 +28528,56 @@ var iife = (function () {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.Component = void 0;
 
-	exports.Component = function (person) { return react.createElement("div", null,
-	    person.realName,
-	    "(",
-	    person.sex,
-	    ")"); };
+	function wranUser() {
+	    console.log('this is void');
+	}
+	exports.Component = function (person) {
+	    var numberValue = 12.34;
+	    var stringValue = 'Wangzongyao';
+	    var arrayValue = [1, 4];
+	    var tupleValue = ['ok', 9];
+	    var enumValue;
+	    (function (enumValue) {
+	        enumValue[enumValue["R"] = 0] = "R";
+	        enumValue[enumValue["G"] = 1] = "G";
+	        enumValue[enumValue["B"] = 2] = "B";
+	    })(enumValue || (enumValue = {}));
+	    var color = enumValue.R;
+	    var anyValue = react.createElement("span", null, "123");
+	    wranUser();
+	    return (react.createElement("div", null,
+	         'Yes' ,
+	        react.createElement("br", null),
+	        numberValue,
+	        react.createElement("br", null),
+	        person.realName,
+	        "(",
+	        person.sex,
+	        ")",
+	        react.createElement("br", null),
+	        stringValue,
+	        react.createElement("br", null),
+	        arrayValue.map(function (item, key) { return react.createElement("div", { key: key }, item); }),
+	        react.createElement("br", null),
+	        tupleValue.map(function (item, key) { return react.createElement("div", { key: key }, item); }),
+	        react.createElement("br", null),
+	        color,
+	        react.createElement("br", null),
+	        anyValue,
+	        react.createElement("br", null)));
+	};
 
 	});
 
 	unwrapExports(person);
 	var person_1 = person.Component;
 
-	var person$1 = createCommonjsModule(function (module, exports) {
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.Component = void 0;
-
-	exports.Component = function (person) { return react.createElement("div", null,
-	    person.realName,
-	    "(",
-	    person.sex,
-	    ")"); };
-
-	});
-
-	unwrapExports(person$1);
-	var person_1$1 = person$1.Component;
-
 	var src = createCommonjsModule(function (module, exports) {
 	Object.defineProperty(exports, "__esModule", { value: true });
 
 
 
-	reactDom.render(react.createElement(person$1.Component, { realName: 'wangzongyao', sex: 'man' }), document.getElementById('app'));
+	reactDom.render(react.createElement(person.Component, { realName: 'wangzongyao', sex: 'man' }), document.getElementById('app'));
 
 	});
 

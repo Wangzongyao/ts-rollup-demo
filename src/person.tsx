@@ -5,4 +5,34 @@ export interface Person {
     sex: string,
 }
 
-export const Component = (person: Person) => <div>{person.realName}({person.sex})</div>
+function wranUser(): void {
+    console.log('this is void')
+}
+
+export const Component = (person: Person) => {
+    const booleanFlag: boolean = true
+    const numberValue: number = 12.34
+    const stringValue: string = 'Wangzongyao'
+    const arrayValue: number[] = [1, 4]
+    const tupleValue: [string, number] = ['ok', 9]
+
+    enum enumValue { R, G, B }
+    const color: enumValue = enumValue.R
+
+    const anyValue: React.ReactNode = <span>123</span>
+
+    wranUser()
+
+    return (
+        <div>
+            {booleanFlag ? 'Yes' : 'No'}<br />
+            {numberValue}<br />
+            {person.realName}({person.sex})<br />
+            {stringValue}<br />
+            {arrayValue.map((item, key) => <div key={key}>{item}</div>)}<br />
+            {tupleValue.map((item, key) => <div key={key}>{item}</div>)}<br />
+            {color}<br />
+            {anyValue}<br />
+        </div>
+    )
+}
