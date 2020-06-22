@@ -759,6 +759,13 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
+"@babel/runtime@^7.10.3":
+  version "7.10.3"
+  resolved "http://172.16.116.19:7001/@babel/runtime/download/@babel/runtime-7.10.3.tgz#670d002655a7c366540c67f6fd3342cd09500364"
+  integrity sha1-Zw0AJlWnw2ZUDGf2/TNCzQlQA2Q=
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.8.4":
   version "7.10.2"
   resolved "http://172.16.116.19:7001/@babel/runtime/download/@babel/runtime-7.10.2.tgz#d103f21f2602497d38348a32e008637d506db839"
@@ -832,6 +839,14 @@
     deepmerge "^4.2.2"
     is-module "^1.0.0"
     resolve "^1.14.2"
+
+"@rollup/plugin-replace@^2.3.3":
+  version "2.3.3"
+  resolved "http://172.16.116.19:7001/@rollup/plugin-replace/download/@rollup/plugin-replace-2.3.3.tgz#cd6bae39444de119f5d905322b91ebd4078562e7"
+  integrity sha1-zWuuOURN4Rn12QUyK5Hr1AeFYuc=
+  dependencies:
+    "@rollup/pluginutils" "^3.0.8"
+    magic-string "^0.25.5"
 
 "@rollup/plugin-typescript@^4.1.2":
   version "4.1.2"
@@ -1174,7 +1189,7 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-magic-string@^0.25.2:
+magic-string@^0.25.2, magic-string@^0.25.5:
   version "0.25.7"
   resolved "http://172.16.116.19:7001/magic-string/download/magic-string-0.25.7.tgz#3f497d6fd34c669c6798dcb821f2ef31f5445051"
   integrity sha1-P0l9b9NMZpxnmNy4IfLvMfVEUFE=
