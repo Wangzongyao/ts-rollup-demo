@@ -8,7 +8,12 @@ export interface Person {
 function wranUser(): void {
     console.log('this is void')
 }
+interface Point {
+    readonly x: number,
+    readonly y: number,
+}
 
+// 变量声明实践
 export const Component = (person: Person) => {
     const booleanFlag: boolean = true
     const numberValue: number = 12.34
@@ -21,8 +26,11 @@ export const Component = (person: Person) => {
 
     const anyValue: React.ReactNode = <span>123</span>
 
-    wranUser()
+    const nullValue: null = null
 
+    const undefinedValue: undefined = undefined
+    wranUser()
+  
     return (
         <div>
             {booleanFlag ? 'Yes' : 'No'}<br />
